@@ -113,7 +113,7 @@ a:hover{
     padding:10px 20px;
 }
 
-#searchform{
+#searchdiv{
     width:100%;
     align-items: center;
     text-align: center;
@@ -126,7 +126,7 @@ a:hover{
     border-radius:20px;
     margin-bottom: 20px;
 }
-#card{
+.card{
     margin:30px;
     display:flex;
     height:auto;
@@ -137,31 +137,31 @@ a:hover{
     margin-top:10px;
 }
 
-#cardimage{
+.cardimage{
     float:left;
     width:150px;
     height:100%;
     border-radius: 5px;
 }
 
-#carddesc{
+.carddesc{
     padding:15px;
     float:left;
     height:100%;
 }
 
-#carddesc h3{
+.carddesc h3{
     margin:0px;
 }
 
-#carddesc p{
+.carddesc p{
     margin: 5px;
     color: gray;
     font-size: 15px;
     margin-left:0;
 }
 
-#card button{
+.card button{
     display:flex;
 }
 

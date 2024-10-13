@@ -29,22 +29,25 @@
     </div>
     <!-- Begin Showing Items From Database -->
     <h1 id="titletext" style="font-size:6vh; margin:0;">Local Sellers</h1>
-    <form id="searchform">
-        <input id="searchbar" type="text" placeholder="What are you craving?">
-    </form>
+    <div id="searchform">
+        <input id="searchbar" type="search" placeholder="What are you craving?">
+    </div>
 
     <!-- Card Default Layout with Item Picture and Information -->
-    <div id="card">
-        <div>
-            <img id="cardimage" src="images/GrubSlugLogo.png" style="aspect-ratio: 1/1;">
+    <div data-user-cards-container></div>
+    <template data-user-template>
+        <div class="card">
+            <div>
+                <img class="cardimage" src="images/GrubSlugLogo.png" style="aspect-ratio: 1/1;" data-item-image>
+            </div>
+            <div class="carddesc">
+                <h3 data-business-name>Business Name</h3>
+                <p data-address>Pickup: ADDRESS</p>
+                <p data-item-hours>Hours: All Weekdays 8:30-9pm</p>
+                <button id="seeitems">See Items</button>
+            </div>
         </div>
-        <div id="carddesc">
-            <h3>Business Name</h3>
-            <p>Pickup: ADDRESS</p>
-            <p>Hours: All Weekdays 8:30-9pm</p>
-            <button id="seeitems">See Items</button>
-        </div>
-    </div>
+    </template>
 
     <!-- Footer with Links and Credits -->
     <footer>
