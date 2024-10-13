@@ -18,10 +18,12 @@
 </head>
 
 <body>
+    <!-- Header (Logo, Shopping Cart, Login, Sell Buttons) -->
     <header>
-        <a href="index.html"><img id="logo" src="/images4sellerPg/GrubSlugLogo.png" alt="grubSlugLogo"></a>
+        <a href="index.html"><img id="logo" src="images/GrubSlugLogo.png"></a>
         <div id="buttons">
-            <button id="sell">Sell</button>
+            <a href="checkout.html"><input id="carticon" type="image" src="images/shopcart.png"></a>
+            <a href="sellerPage.html"><button id="sell" >Sell</button></a>
             <button id="login">Login</button>
         </div>
     </header>
@@ -49,9 +51,8 @@
             <hr>
 
             <!-- Search Bar -->
-            <div class="search-wrapper">
-                <label for="search">Search Users</label>
-                <input type="search" id="search" data-search>
+            <div id="searchdiv">
+                <input id="searchbar" type="search" placeholder="Looking for something in particular?" data-search>
             </div>
 
             <!-- Food/Item Cards -->

@@ -2,6 +2,7 @@ body{
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     background-color: #fffffe;
+    margin:0;
 }
 header{
     height: 80px;
@@ -11,9 +12,6 @@ header{
     position:sticky;
     top:0;
     z-index: 100;
-}
-body{
-    margin:0;
 }
 #logo{
     padding:5px;
