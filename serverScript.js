@@ -4,27 +4,29 @@ const db = require('diskdb');
 const pathToFolder = path.join(__dirname, '/db');
 db.connect(pathToFolder, ['listings'])
 
-const krabbypatty = {
-    item_name: "Fries",
-    item_description: "Fried to crispy perfection",
-    item_price: 3.95,
-    item_ingreds: "Potatoes, Peanut Oil, Salt",
+const food1 = {
+    item_name: "Tacos",
+    item_picture: "images/tacos",
+    item_description: "Tacos! And it's not even tuesday!",
+    item_price: 12.20,
+    item_ingreds: "Corn Tortilla, Beef",
 };
-const kelpshake = {
-    item_name: "Dr. Pepper",
-    item_description: "The king of all sodas.",
-    item_price: 1.25,
-    item_ingreds: "It's a secret...",
+const food2 = {
+    item_name: "TPumps",
+    item_picture: "images/tpumps",
+    item_description: "So many flavors!",
+    item_price: 6.25,
+    item_ingreds: "Tapioca Pearls, Milk, Tea",
 };
 
 const example = {
-    seller: "Oakes Cafe",
-    bio: "A serene cafe serving only the finest delicacies on UCSC Campus.",
-    address: "Oakes Cafe",
-    hours: "Weekdays: 9:00AM - 11:30PM",
-    picture: "/images/oakescafe.png",
+    seller: "ACM Student Organization",
+    bio: "A student organization encouraging the knowledge of computation.",
+    address: "E2-180",
+    hours: "Wednesdays: 4:00PM - 6:00PM",
+    picture: "images/acm.png",
     location: [36.989920, -122.064790],
-    items: [krabbypatty, kelpshake],
+    items: [food1, food2],
 };
 
 db.listings.save(example);
