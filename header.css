@@ -1,0 +1,41 @@
+header{
+    height:10vh;
+    width:100%;
+    background-color: #1C395E;
+    padding: 0px;
+    position:sticky;
+    top:0;
+    display:flex;
+    justify-content: space-between;
+}
+body{
+    margin:0;
+}
+#logo{
+    padding:1vh
+}
+#buttons{
+    float:right;
+    padding:20px;
+    max-height: 5vh;
+    width:30vh;
+    
+}
+button{
+    border-radius: 5px;
+}
+#sell{
+    height:100%;
+    width:14vh;
+    background-color: #fffffe;
+    font-size: 3vh;
+    border:0;
+}
+#login{
+    height:100%;
+    width:14vh;
+    float:right;
+    background-color: #EED700;
+    font-size: 3vh;
+    border:0;
+}
