@@ -133,6 +133,16 @@ form input{
     height:30px;
 }
 
+#checkoutbutton{
+    height:40px;
+    width:130px;
+    border-radius: 2px;
+    border: none;
+    background-color: #1C395E;
+    color: #dadada;
+    margin-top:10px;
+}
+
 footer{
     display:flex;
     flex-direction:row;

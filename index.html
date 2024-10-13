@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Title and Favicon -->
-    <title>GrubSlug</title>
-    <link rel="icon" type="image/x-icon" href="/images/GrubSlugFavicon.ico">
-
     <!-- Link CSS File -->
     <link rel="stylesheet" href="index.css"> 
     
@@ -16,7 +12,7 @@
 <body>
     <!-- Header (Logo, Shopping Cart, Login, Sell Buttons) -->
     <header>
-        <img id="logo" src="images/GrubSlugLogo.png">
+        <a href="index.html"><img id="logo" src="images/GrubSlugLogo.png"></a>
         <div id="buttons">
             <a href="checkout.html"><input id="carticon" type="image" src="images/shopcart.png"></a>
             <a href="sellerPage.html"><button id="sell" >Sell</button></a>
@@ -33,27 +29,22 @@
     </div>
     <!-- Begin Showing Items From Database -->
     <h1 id="titletext" style="font-size:6vh; margin:0;">Local Sellers</h1>
-    <div id="searchdiv">
-        <input id="searchbar" type="search" placeholder="What are you craving?" data-search>
-    </div>
+    <form id="searchform">
+        <input id="searchbar" type="text" placeholder="What are you craving?">
+    </form>
 
     <!-- Card Default Layout with Item Picture and Information -->
-    <div data-user-cards-container></div>
-    <template data-user-template>
-        <div class="card">
-            <div>
-                <img class="cardimage" src="images/GrubSlugLogo.png" style="aspect-ratio: 1/1;" data-image>
-            </div>
-            <div class="carddesc">
-                <h3 data-name>Business Name</h3>
-                <p data-address>Pickup: ADDRESS</p>
-                <p data-hours>Hours: All Weekdays 8:30-9pm</p>
-                <a href="" data-button>
-                    <button id="seeitems">See Items</button>
-                </a>
-            </div>
+    <div id="card">
+        <div>
+            <img id="cardimage" src="images/GrubSlugLogo.png" style="aspect-ratio: 1/1;">
         </div>
-    </template>
+        <div id="carddesc">
+            <h3>Business Name</h3>
+            <p>Pickup: ADDRESS</p>
+            <p>Hours: All Weekdays 8:30-9pm</p>
+            <button id="seeitems">See Items</button>
+        </div>
+    </div>
 
     <!-- Footer with Links and Credits -->
     <footer>
@@ -64,6 +55,5 @@
             <p>ACM Hacks 2024</p>
         </div>
     </footer>
-    <script src="indexScript.js"></script>
 </body>
 </html>
