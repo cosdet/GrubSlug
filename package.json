@@ -1,0 +1,15 @@
+{
+  "name": "grubslug",
+  "version": "1.0.0",
+  "description": "For the ACM 2024 Hackathon",
+  "main": "serverScript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Figma Sigmas",
+  "license": "ISC",
+  "dependencies": {
+    "diskdb": "^0.1.17"
+  }
+}

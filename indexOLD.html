@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="index.css"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img id="logo" src="/images/GrubSlugLogo.png">
+        <div id="buttons">
+            <button id="sell">Sell</button>
+            <button id="login">Login</button>
+        </div>
+    </header>
+    <div id="welcome">
+        <img id="background" src="/images/ucscbackground.jpg">
+        <div id="welcomebox">
+            <h1 id="titletext">GrubSlug</h1>
+            <p id="grubslugdesc">The Dining Food Reselling App @ UCSC</p>
+        </div>
+    </div>
+    <h1 id="titletext" style="font-size:6vh; margin:0;">Student Market</h1>
+    <div id="searchdiv">
+        <input id="searchbar" type="search" placeholder="What are you craving?" data-search>
+    </div>
+    <div data-user-cards-container></div>
+    <template data-user-template>
+        <div class="card">
+            <div>
+                <img class="cardimage" src="/images/GrubSlugLogo.png" style="aspect-ratio: 1/1;" data-item-image>
+            </div>
+            <div class="carddesc">
+                <h3 id="item_name" data-item-name>Item Name</h3>
+                <p>Pickup</p>
+                <p data-item-hours>Hours: All Weekdays 8:30-9pm</p>
+                <button onclick="addToCart()">See Items</button>
+            </div>
+        </div>
+    </template>
+    
+    <footer>
+        
+        <img id="logo" src="/images/GrubSlugLogo.png">
+        <p>Contact Us</p>
+        <p>GrubSlug 2024</p>
+        <p>ACM Hacks 2024</p>
+    </footer>
+    <script src="clientScript.js"></script>
+</body>
+</html>
