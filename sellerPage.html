@@ -2,15 +2,22 @@
 <html lang="en">
 
 <head>
+    <!-- Title and Favicon -->
     <title>GrubSlug</title>
-    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/images/GrubSlugFavicon.ico">
+
+    <!-- Link CSS File and JS File -->
     <link rel="stylesheet" href="sellerPageStyle.css">
     <script src="sellerPage.js" defer></script>
-    <link rel="icon" type="image/x-icon" href="/images/GrubSlugFavicon.ico">
+    <meta charset="UTF-8">
+
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
     <header>
         <a href="index.html"><img id="logo" src="/images4sellerPg/GrubSlugLogo.png" alt="grubSlugLogo"></a>
         <div id="buttons">
@@ -30,9 +37,10 @@
                     <h1 id="seller">SpongeBob</h1>
                     <h5 id="bio">Local Seller at UCSC! I always have<br>extra Krabby Patties to give out!</h5>
                 </div>
+                <!--                 
                 <div id="addItemBut" class="child">
-                    <a href="foodDisplay.html">ADD ITEM</a>
-                </div>
+                    <a href="foodDisplay.html" id="c">ADD ITEM</a>
+                </div> -->
             </div>
         </div>
         <div id="segment">
@@ -47,16 +55,32 @@
             </div>
 
             <!-- Food/Item Cards -->
-            <div class="user-cards" data-user-cards-container>
-                <template data-user-template>
-                    <div class="card">
-                        <div class="header" data-header></div>
-                        <div class="body" data-body></div>
+            <div data-user-cards-container></div>
+            <template data-user-template>
+                <div class="card">
+                    <div>
+                        <img class="cardimage" src="images/GrubSlugLogo.png" style="aspect-ratio: 1/1;" data-image>
                     </div>
-                </template>
-            </div>
+                    <div class="carddesc">
+                        <h3 data-name>Food Name</h3>
+                        <p data-price>$0.00</p>
+                        <a href="" data-button>
+                            <button id="addtocart">Add To Cart</button>
+                        </a>
+                    </div>
+                </div>
+            </template>
         </div>
     </div>
+
+    <!-- Footer with Links and Credits -->
     <footer>
+        <p style="float:left; justify-content: space-between; margin-left:15px;">Austin Eng - Sean Weber - Ember Lu - Sindhura Appiah</p>
+        <div style="float:right; position:absolute; right:5px;">
+            <p style="float:right; margin-right:20px;">Contact Us</p>
+            <p>GrubSlug 2024</p>
+            <p>ACM Hacks 2024</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -3,11 +3,21 @@ const userCardContainer = document.querySelector("[data-user-cards-container]");
 const searchInput = document.querySelector("[data-search]");
 const searchParams = new URLSearchParams(window.location.search);
 
-//load custom seller parameters
+// Search functionality
+searchInput.addEventListener("input", e => {
+    const value = e.target.value.toLowerCase() // Convert to lowercase for case-insensitive search
+    items.forEach(user => {
+        const isVisible = user.name.toLowerCase().includes(value);
+        user.element.classList.toggle("hide", !isVisible);
+    })
+})
+
+let items = [];
+
+//load custom seller parameters and list all food/item cards
 window.onload = function(){
     if (searchParams.has("seller")){
         const seller = searchParams.get("seller").replace(/-/g, ' ');
-        console.log(seller);
         fetch("./db/listings.json")
             .then(res => res.json())
             .then(data => {
@@ -16,39 +26,21 @@ window.onload = function(){
                         document.getElementById("avatar").src = `/images/${seller.replace(/\s/g, '').toLowerCase()}.png`;
                         document.getElementById("seller").innerText = `${seller}`;
                         document.getElementById("bio").innerText = `${user.bio}`;
+                        items = user.items.map(item => {
+                            const card = userCardTemplate.content.cloneNode(true).children[0]
+                            const image = card.querySelector("[data-image]");
+                            const name = card.querySelector("[data-name]");
+                            const price = card.querySelector("[data-price]");
+
+                            image.src = item.item_picture;
+                            name.textContent = item.item_name;
+                            price.textContent = `$${parseFloat(item.item_price).toFixed(2)}`;
+                            userCardContainer.append(card);
+
+                            return { name: item.item_name, element: card };
+                        })
                     }
                 })
             });
     };
 };
-
-
-// object
-let users = []
-
-// Search functionality
-searchInput.addEventListener("input", e => {
-    const value = e.target.value.toLowerCase() // Convert to lowercase for case-insensitive search
-    users.forEach(user => {
-        const isVisible = user.name.toLowerCase().includes(value) || user.email.toLowerCase().includes(value)
-        user.element.classList.toggle("hide", !isVisible)
-    })
-})
-
-// Fetch users
-fetch("https://jsonplaceholder.typicode.com/users")//i hate this
-    .then(res => res.json())
-    .then(data => {
-        users = data.map(user => {
-            const card = userCardTemplate.content.cloneNode(true).children[0]
-            const header = card.querySelector("[data-header]")
-            const body = card.querySelector("[data-body]")
-            header.textContent = user.name
-            body.textContent = user.email
-            userCardContainer.append(card)
-
-            //console.log(card) // Moved console.log here
-
-            return { name: user.name, email: user.email, element: card }
-        })
-    })
