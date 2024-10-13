@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Title and Favicon -->
+    <title>GrubSlug</title>
+    <link rel="icon" type="image/x-icon" href="/images/GrubSlugFavicon.ico">
+
     <!-- Link CSS File -->
     <link rel="stylesheet" href="index.css"> 
     
@@ -29,8 +33,8 @@
     </div>
     <!-- Begin Showing Items From Database -->
     <h1 id="titletext" style="font-size:6vh; margin:0;">Local Sellers</h1>
-    <div id="searchform">
-        <input id="searchbar" type="search" placeholder="What are you craving?">
+    <div id="searchdiv">
+        <input id="searchbar" type="search" placeholder="What are you craving?" data-search>
     </div>
 
     <!-- Card Default Layout with Item Picture and Information -->
@@ -38,13 +42,15 @@
     <template data-user-template>
         <div class="card">
             <div>
-                <img class="cardimage" src="images/GrubSlugLogo.png" style="aspect-ratio: 1/1;" data-item-image>
+                <img class="cardimage" src="images/GrubSlugLogo.png" style="aspect-ratio: 1/1;" data-image>
             </div>
             <div class="carddesc">
-                <h3 data-business-name>Business Name</h3>
+                <h3 data-name>Business Name</h3>
                 <p data-address>Pickup: ADDRESS</p>
-                <p data-item-hours>Hours: All Weekdays 8:30-9pm</p>
-                <button id="seeitems">See Items</button>
+                <p data-hours>Hours: All Weekdays 8:30-9pm</p>
+                <a href="" data-button>
+                    <button id="seeitems">See Items</button>
+                </a>
             </div>
         </div>
     </template>
@@ -58,5 +64,6 @@
             <p>ACM Hacks 2024</p>
         </div>
     </footer>
+    <script src="indexScript.js"></script>
 </body>
 </html>

@@ -1,6 +1,27 @@
-const userCardTemplate = document.querySelector("[data-user-template]")
-const userCardContainer = document.querySelector("[data-user-cards-container]")
-const searchInput = document.querySelector("[data-search]") // fixed typo from 'data-serach'
+const userCardTemplate = document.querySelector("[data-user-template]");
+const userCardContainer = document.querySelector("[data-user-cards-container]");
+const searchInput = document.querySelector("[data-search]");
+const searchParams = new URLSearchParams(window.location.search);
+
+//load custom seller parameters
+window.onload = function(){
+    if (searchParams.has("seller")){
+        const seller = searchParams.get("seller").replace(/-/g, ' ');
+        console.log(seller);
+        fetch("./db/listings.json")
+            .then(res => res.json())
+            .then(data => {
+                data.forEach(user => {
+                    if(user.seller == seller){
+                        document.getElementById("avatar").src = `/images/${seller.replace(/\s/g, '').toLowerCase()}.png`;
+                        document.getElementById("seller").innerText = `${seller}`;
+                        document.getElementById("bio").innerText = `${user.bio}`;
+                    }
+                })
+            });
+    };
+};
+
 
 // object
 let users = []
@@ -8,7 +29,6 @@ let users = []
 // Search functionality
 searchInput.addEventListener("input", e => {
     const value = e.target.value.toLowerCase() // Convert to lowercase for case-insensitive search
-    console.log(value)
     users.forEach(user => {
         const isVisible = user.name.toLowerCase().includes(value) || user.email.toLowerCase().includes(value)
         user.element.classList.toggle("hide", !isVisible)
@@ -27,7 +47,7 @@ fetch("https://jsonplaceholder.typicode.com/users")//i hate this
             body.textContent = user.email
             userCardContainer.append(card)
 
-            console.log(card) // Moved console.log here
+            //console.log(card) // Moved console.log here
 
             return { name: user.name, email: user.email, element: card }
         })

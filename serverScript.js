@@ -4,16 +4,30 @@ const db = require('diskdb');
 const pathToFolder = path.join(__dirname, '/db');
 db.connect(pathToFolder, ['listings'])
 
-//db.listings.save(example);
+const krabbypatty = {
+    item_name: "Fries",
+    item_description: "Fried to crispy perfection",
+    item_price: 3.95,
+    item_ingreds: "Potatoes, Peanut Oil, Salt",
+};
+const kelpshake = {
+    item_name: "Dr. Pepper",
+    item_description: "The king of all sodas.",
+    item_price: 1.25,
+    item_ingreds: "It's a secret...",
+};
 
-const jsonFile = path.join(pathToFolder, '/listings.json');
-const data = jsonFile;
-console.log(data);
+const example = {
+    seller: "Oakes Cafe",
+    bio: "A serene cafe serving only the finest delicacies on UCSC Campus.",
+    address: "Oakes Cafe",
+    hours: "Weekdays: 9:00AM - 11:30PM",
+    picture: "/images/oakescafe.png",
+    location: [36.989920, -122.064790],
+    items: [krabbypatty, kelpshake],
+};
 
-function addToCart() {
-    const item_text_id = document.getElementById('item_name')
-    const item_text = item_text_id.textContent || item_text_id.innerText
-}
+db.listings.save(example);
 /*
 Example Listing:
 const krabbypatty = {

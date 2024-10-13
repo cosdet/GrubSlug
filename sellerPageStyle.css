@@ -91,6 +91,7 @@ button{
   border-radius: 50%; /* Optional: if you want to crop the image into a circle */
   width: 200px; /* Set the width of the image */
   height: auto;  /* Maintain aspect ratio */
+  aspect-ratio: 1/1;
 }
 
 #spongeBobTxt {

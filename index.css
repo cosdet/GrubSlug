@@ -165,6 +165,10 @@ a:hover{
     display:flex;
 }
 
+.hide {
+    display:none;
+}
+
 #seeitems{
     margin-top:10px;
     background-color: #1C395E;
