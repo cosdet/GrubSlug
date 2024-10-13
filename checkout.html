@@ -12,9 +12,10 @@
     <body>
         <!--Welcome to... The Grub of the Slugs!-->
         <header>
-            <img id="logo" src="./images/GrubSlugLogo.png">
+            <img id="logo" src="images/GrubSlugLogo.png">
             <div id="buttons">
-                <button id="sell">Sell</button>
+                <a href="checkout.html"><input id="carticon" type="image" src="images/shopcart.png"></a>
+                <a href="sellerPage.html"><button id="sell" >Sell</button></a>
                 <button id="login">Login</button>
             </div>
         </header>
@@ -24,35 +25,60 @@
                 <!--Implement list of items-->
                 <div class="card">
                     <div>
-                        <img class="cardimage" src="/images/GrubSlugLogo.png" style="aspect-ratio: 1/1;">
+                        <img class="cardimage" src="images/GrubSlugLogo.png" style="aspect-ratio: 1/1;">
                     </div>
                     <div class="carddesc">
                         <h3>Item Name</h3>
-                        <p>Pickup</p>
-                        <p>Hours: All Weekdays 8:30-9pm</p>
-                        <button>Add to Cart</button>
+                        <p>$4.00</p>
+                        <p>Pickup Time:8:30-9pm</p>
+                        <button>Remove</button>
                     </div>
                 </div>
                 <div class="card">
                     <div>
-                        <img class="cardimage" src="/images/GrubSlugLogo.png" style="aspect-ratio: 1/1;">
+                        <img class="cardimage" src="images/GrubSlugLogo.png" style="aspect-ratio: 1/1;">
                     </div>
                     <div class="carddesc">
                         <h3>Item Name</h3>
-                        <p>$0.00</p>
-                        <p>Seller</p>
+                        <p>$4.00</p>
+                        <p>Pickup Time: 9pm</p>
                         <button>Remove</button>
                     </div>
                 </div>
             </div>
-            <h2 id="total">Total: $0.00</h2>
+            <h2 id="total">Total: $8.00</h2>
         </div>
         <hr>
         <div id="billing">
             <h1>Billing</h1>
             <div id="billinginfo">
-                <!--Implement billinginfo-->
+                <form>
+                    <label>Name</label>
+                    <input><br>
+                    <label>Cardholder Name</label>
+                    <input><br>
+                    <label>Credit Card Number</label>
+                    <input><br>
+                    <label>CVV</label>
+                    <input><br>
+                    <label>Expiration Date</label>
+                    <input><br>
+                    <label>Billing Address</label>
+                    <input><br>
+                    <label>Notes</label>
+                    <input><br>
+                </form>
             </div>
         </div>
+
+        <!-- Footer with Links and Credits -->
+        <footer>
+            <p style="float:left; justify-content: space-between; margin-left:15px;">Austin Eng - Sean Weber - Ember Lu - Sindhura Appiah</p>
+            <div style="float:right; position:absolute; right:5px;">
+                <p style="float:right; margin-right:20px;">Contact Us</p>
+                <p>GrubSlug 2024</p>
+                <p>ACM Hacks 2024</p>
+            </div>
+        </footer>
     </body>
 </html> 
