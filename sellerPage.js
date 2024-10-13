@@ -31,7 +31,9 @@ window.onload = function(){
                             const image = card.querySelector("[data-image]");
                             const name = card.querySelector("[data-name]");
                             const price = card.querySelector("[data-price]");
+                            const button = card.querySelector("[data-button]");
 
+                            button.href = `foodDisplay.html?name=${item.item_name.replace(/\s/g, '-').replace(/\./g, '_')}`;
                             image.src = item.item_picture;
                             name.textContent = item.item_name;
                             price.textContent = `$${parseFloat(item.item_price).toFixed(2)}`;
