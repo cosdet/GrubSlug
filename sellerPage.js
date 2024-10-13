@@ -23,7 +23,7 @@ window.onload = function(){
             .then(data => {
                 data.forEach(user => {
                     if(user.seller == seller){
-                        document.getElementById("avatar").src = `/images/${seller.replace(/\s/g, '').toLowerCase()}.png`;
+                        document.getElementById("avatar").src = user.picture;
                         document.getElementById("seller").innerText = `${seller}`;
                         document.getElementById("bio").innerText = `${user.bio}`;
                         items = user.items.map(item => {

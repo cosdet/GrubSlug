@@ -48,7 +48,7 @@ const kelpshake = {
 const example = {
     seller: "Spongebob",
     bio: "I'm secretly freakbob.",
-    picture: "/images/Spongebob.png",
+    picture: "images/Spongebob.png",
     location: [34.052235, -118.243683],
     items: [krabbypatty, kelpshake],
 };
