@@ -1,0 +1,170 @@
+body{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+}
+header{
+    height: 80px;
+    width: 100%;
+    background-color: #1C395E;
+    padding: 0px;
+    position:sticky;
+    top:0;
+    z-index: 100;
+}
+body{
+    margin:0;
+}
+#logo{
+    padding:5px;
+    margin-left: 10px;
+    max-width:60px;
+    max-height:60px;
+}
+#buttons{
+    float:right;
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    height: 50px;
+    width:min(30vw, 200px);
+}
+button{
+    border-radius: 5px;
+}
+#sell{
+    height:100%;
+    width: clamp(5px, 13vw, 90px);
+    background-color: #fffffe;
+    font-size: clamp(12px, 3vw, 18px);
+    font-family: 'Outfit';
+    border:0;
+}
+#login{
+    height:100%;
+    width: clamp(5px, 13vw, 90px);
+    float:right;
+    background-color: #EED700;
+    font-size: clamp(12px, 3vw, 18px);
+    font-family: 'Outfit';
+    border:0;
+}
+#welcome{
+    width:100%;
+    overflow:hidden;
+    max-height:90vh;
+    max-width:100%;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    position:relative;
+}
+#background{
+    display:block;
+    max-width: 100%;
+    max-height:100%;
+    object-fit: fill;
+}
+#welcomebox{
+    background-color: #fffffe;
+    opacity:0.7;
+    aspect-ratio: 4;
+    min-width: 50%;
+    position:absolute;
+    text-align:center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+}
+#titletext{
+    text-align: center;
+    margin:5px;
+    font-size: 10vh;
+    padding:10px;
+    padding-bottom:0;
+}
+#grubslugdesc{
+    margin:5px;
+    margin-top:0;
+    text-align:center;
+    padding-top:0;
+    padding:10px 20px;
+}
+
+#searchform{
+    width:100%;
+    align-items: center;
+    text-align: center;
+}
+#searchbar{
+    margin:10px;
+    width:60%;
+    height:4vh;
+    padding-left:25px;
+    border-radius:20px;
+    margin-bottom: 20px;
+}
+#card{
+    margin:30px;
+    display:flex;
+    height:auto;
+    clear:both;
+    border-radius: 10px;
+    padding:10px;
+    border: 1px solid lightgray;
+    margin-top:10px;
+}
+
+#cardimage{
+    float:left;
+    width:150px;
+    height:100%;
+    border-radius: 5px;
+}
+
+#carddesc{
+    padding:15px;
+    float:left;
+    height:100%;
+}
+
+#carddesc h3{
+    margin:0px;
+}
+
+#carddesc p{
+    margin: 5px;
+    color: gray;
+    font-size: 15px;
+    margin-left:0;
+}
+
+#card button{
+    display:flex;
+}
+
+footer{
+    display:flex;
+    flex-direction:row-reverse;
+    height: 80px;
+    width: 100%;
+    background-color: #1C395E;
+    padding: 0px;
+    bottom:0;
+    z-index: 100;
+    
+    align-items: center;
+    color:#EED700
+}
+
+footer p{
+    float:right;
+    margin:5px;
+    width:fit-content;
+}
+
+footer img{
+    
+    float:right;
+}
