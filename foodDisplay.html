@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>GrubSlug</title>
+        <meta charset = "UTF-8">
+        <link rel="stylesheet" href="foodDisplayStyle.css">
+        <script src = "javaScript.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href ="index.html"><img id="logo" src="/ACEACMHacathon/images4sellerPg/GrubSlugLogo.png" alt="grubSlugLogo"></a>
+            <div id="buttons">
+                <button id="sell">Sell</button>
+                <button id="login">Login</button>
+            </div>
+        </header>
+        <div id="main">
+
+            <div class="parent">
+                <div id="centerItems">
+                    <div id="tempFood_Item" class="child">
+                        <img src="" alt="Pick Delicious Item">
+                    </div>
+                    <div id="itemTxt" class="child">
+                        <h1>Item</h1>
+                        <h5>Fries</h5>
+                    </div>
+                    <div id="money" class="child">
+                        <div id ="insideStuff">$</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description Textarea -->
+            <div id="descriptionBox">
+                <p><label for="description">Description of Item</label></p>
+                <textarea id="description" name="description" rows="6" cols="50">
+                    Add description...
+                </textarea>
+            </div>
+
+            <!-- Ingredients Textarea -->
+            <div id="ingredientsBox">
+                <p><label for="ingredients">Ingredients</label></p>
+                <textarea id="ingredients" name="ingredients" rows="6" cols="50">
+                    Add ingredients...
+                </textarea>
+            </div>
+            <div id="addItemBut" class="child">
+                <a href="sellerPage.html">ADD</a>
+            </div>
+
+        </div>
+        <footer> 
+
+        </footer>
+    </body>
+</html>

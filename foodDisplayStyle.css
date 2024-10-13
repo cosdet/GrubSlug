@@ -1,0 +1,183 @@
+body{
+    margin:0px;
+    padding:0px;
+    background-image:url("/images4sellerPg/UCSCCampus.jpg");
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+header{
+    height: 60px;
+    width: 100%;
+    background-color: #1C395E;
+    padding: 0px;
+    position:sticky;
+    top:0;
+    z-index: 100;
+    box-sizing: border-box;
+}
+#logo{
+    padding:5px;
+    margin-left: 10px;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+}
+#buttons{
+    float:right;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 10px;
+    height: 100%;
+    width:min(30vw, 200px);
+    box-sizing: border-box;
+}
+button{
+    border-radius: 5px;
+}
+#sell{
+    height:100%;
+    width: clamp(5px, 13vw, 90px);
+    background-color: #fffffe;
+    color:black;
+    font-size: clamp(12px, 3vw, 18px);
+    font-family: 'Outfit';
+    border:0;
+    box-sizing: border-box;
+}
+#login{
+    height:100%;
+    width: clamp(5px, 13vw, 90px);
+    float:right;
+    background-color: #EED700;
+    font-size: clamp(12px, 3vw, 18px);
+    font-family: 'Outfit';
+    border:0;
+    color:black;
+    box-sizing: border-box;
+}
+
+#main{
+    margin:auto;
+    margin-top:40vh;
+    background-color: white;
+    opacity: 85%;
+    width:80%;
+    height:fit-content;
+    padding: 20px; /* Added padding for spacing */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adding some box shadow for better visibility */
+}
+
+/*holds the img icon, name of seller, quick bio, and add Item button together*/
+#tempFood_Item{
+    background-color: #777;
+    width: 200px; /* Set the width of the image */
+    height: auto; 
+}
+
+.text-box {
+    margin: 20px 0;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Allows the user to resize the box vertically */
+    box-sizing: border-box;
+}
+
+/* Labels styling */
+label {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+/* Flexbox layout for parent and child elements */
+.parent {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#centerItems {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    /*border: 1px solid #ccc;*/
+    border-radius: 10px; /* Added border-radius for smooth edges */
+}
+
+.child {
+    flex: 1;
+}
+
+#tempFood_Item{
+    width: 100px;
+    height: 100px;
+    border:1px solid black;
+    padding:10x;
+    margin:10px;
+    
+}
+
+/* Styling for the description and ingredients sections */
+#descriptionBox, #ingredientsBox {
+    margin-bottom: 20px; /* Added space between sections */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+#descriptionBox textarea, #ingredientsBox textarea {
+    height: 150px; /* Fixed height for textareas */
+}
+
+/* Additional button styles */
+button {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #1C395E;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#addItemBut a {
+    margin-left:150px;
+    background-color: navy;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  #addItemBut a:hover {
+    background-color: #000080; /* Darker navy on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    text-decoration: underline;
+  }
+
+  #money{
+    border:1px solid black;
+    font-size:30px;
+  }
