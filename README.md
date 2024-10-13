@@ -1,6 +1,5 @@
 # GrubSlug
-For the ACM 2024 Hackathon - UCSC
-Created by Ember Lu, Sean Weber, Austin Eng, and Sindhura Appiah
+For UCSC's ACM 2024 Hackathon by Ember Lu, Sean Weber, Austin Eng, and Sindhura Appiah
 
 GrubSlug is a web-based marketplace designed to tackle the growing problem of food waste, particularly on university campuses. Every day, dining halls and students generate surplus food that is often discarded, contributing to environmental harm and missed opportunities for redistribution. GrubSlug offers a solution by allowing dining halls and students to sell leftover meals at reduced prices, reducing food waste and promoting sustainability.
 
